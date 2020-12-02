@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.signeasy.com/v2/template/rs/1653277/signing/url
+    body:
+      encoding: UTF-8
+      string: '{"recipient_email":"xlablaza@gmail.com","redirect_url":"https://makisu.co","allow_decline":true}'
+    headers:
+      Authorization:
+      - Bearer mKxe5aYOL22Xj2jIK7gukpFoY4gJC1
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: UNAUTHORIZED
+    headers:
+      Date:
+      - Wed, 02 Dec 2020 07:16:10 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '66'
+      Connection:
+      - keep-alive
+      Server:
+      - nginx/1.14.2
+      Www-Authenticate:
+      - Basic realm="flask-restful"
+    body:
+      encoding: UTF-8
+      string: '{"message": "Unauthorized", "error_code": "unauthorized_resource"}'
+  recorded_at: Wed, 02 Dec 2020 07:16:10 GMT
+recorded_with: VCR 6.0.0

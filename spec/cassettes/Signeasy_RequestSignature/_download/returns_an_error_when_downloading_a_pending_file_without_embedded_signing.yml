@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.signeasy.com/v2/template/rs/1653277/download
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer mKxe5aYOL22Xj2jIK7gukpFoY4gJC1
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: UNAUTHORIZED
+    headers:
+      Date:
+      - Wed, 02 Dec 2020 07:30:04 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '66'
+      Connection:
+      - keep-alive
+      Server:
+      - nginx/1.14.2
+      Www-Authenticate:
+      - Basic realm="flask-restful"
+    body:
+      encoding: UTF-8
+      string: '{"message": "Unauthorized", "error_code": "unauthorized_resource"}'
+  recorded_at: Wed, 02 Dec 2020 07:30:05 GMT
+recorded_with: VCR 6.0.0

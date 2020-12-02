@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.signeasy.com/v2/template/rs/1652096/cancel
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Authorization:
+      - Bearer IYk19NyuctpWTzpQk40PFIgqkBWzVA
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.1.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: UNAUTHORIZED
+    headers:
+      Date:
+      - Wed, 02 Dec 2020 03:58:51 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '66'
+      Connection:
+      - keep-alive
+      Server:
+      - nginx/1.14.2
+      Www-Authenticate:
+      - Basic realm="flask-restful"
+    body:
+      encoding: UTF-8
+      string: '{"message": "Unauthorized", "error_code": "unauthorized_resource"}'
+  recorded_at: Wed, 02 Dec 2020 03:58:51 GMT
+recorded_with: VCR 6.0.0

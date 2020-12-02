@@ -1,0 +1,72 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.signeasy.com/v2/template/rs
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer IYk19NyuctpWTzpQk40PFIgqkBWzVA
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 02 Dec 2020 04:52:33 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1367'
+      Connection:
+      - keep-alive
+      Server:
+      - nginx/1.14.2
+      X-Signeasy-Request-Id:
+      - apireq_1606884752217
+      Access-Control-Allow-Credentials:
+      - 'true'
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, PATCH, PUT, DELETE, OPTIONS
+      - GET, POST, PATCH, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Mx-ReqToken,X-Requested-With
+      - Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Mx-ReqToken,X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Disposition
+      - Content-Disposition
+      - Content-Length
+      - Content-Length
+      Access-Control-Allow-Origin:
+      - "*"
+    body:
+      encoding: UTF-8
+      string: '{"count": 2, "files": [{"owner_first_name": "Xavi", "owner_company":
+        "Makisu", "recipients": [{"status": "not_viewed", "last_modified_time": 1606858304,
+        "first_name": "Xavi", "last_name": "Ablaza", "recipient_user_id": 6880070,
+        "recipient_id": 2638307, "created_time": 1606858304, "order_id": 1, "email":
+        "xlablaza@gmail.com"}], "is_embedded_sending": null, "name": "Demo Contract
+        2.pdf", "is_ordered": 0, "owner_email": "xavi+signeasy@makisu.co", "owner_last_name":
+        "Ablaza", "has_markers": 1, "last_modified_time": 1606858305, "status": "incomplete",
+        "is_in_person": 0, "created_time": 1606858304, "logo": null, "next": 2638307,
+        "id": 1652135, "owner_user_id": 6865225, "aadhaar_enabled": 0}, {"owner_first_name":
+        "Xavi", "owner_company": "Makisu", "recipients": [{"status": "not_viewed",
+        "last_modified_time": 1606883723, "first_name": "Xavi", "last_name": "Ablaza",
+        "recipient_user_id": 6880070, "recipient_id": 2640025, "created_time": 1606883723,
+        "order_id": 1, "email": "xlablaza@gmail.com"}], "is_embedded_sending": null,
+        "name": "Demo Contract 3.pdf", "is_ordered": 0, "owner_email": "xavi+signeasy@makisu.co",
+        "owner_last_name": "Ablaza", "has_markers": 1, "last_modified_time": 1606883723,
+        "status": "incomplete", "is_in_person": 0, "created_time": 1606883722, "logo":
+        null, "next": 2640025, "id": 1653277, "owner_user_id": 6865225, "aadhaar_enabled":
+        0}]}'
+  recorded_at: Wed, 02 Dec 2020 04:52:33 GMT
+recorded_with: VCR 6.0.0

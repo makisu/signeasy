@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.signeasy.com/v2/template/4205749
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer pCpIS2M4rmrKPQn13bj4aVPelVBNMw
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 01 Dec 2020 23:04:51 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '735'
+      Connection:
+      - keep-alive
+      Server:
+      - nginx/1.14.2
+      X-Signeasy-Request-Id:
+      - apireq_1606863891709
+      Access-Control-Allow-Credentials:
+      - 'true'
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, PATCH, PUT, DELETE, OPTIONS
+      - GET, POST, PATCH, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Mx-ReqToken,X-Requested-With
+      - Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Mx-ReqToken,X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Disposition
+      - Content-Disposition
+      - Content-Length
+      - Content-Length
+      Access-Control-Allow-Origin:
+      - "*"
+    body:
+      encoding: UTF-8
+      string: '{"is_shared": false, "hash": null, "name": "Try it now - demo", "is_ordered":
+        false, "modified_time": 1606849108.0, "is_owned": true, "link": "https://app.signeasy.com/t/public/",
+        "dirty": false, "created_time": 1606849029.0, "is_public": false, "message":
+        "", "id": 4205749, "metadata": {"fields": [{"required": true, "additional_info":
+        "MM/DD/YY", "role_id": 1, "id": 1, "type": "signature", "sub_type": "signature"},
+        {"required": true, "additional_info": "MM/DD/YY", "role_id": 1, "id": 2, "type":
+        "text", "sub_type": "text"}, {"required": true, "additional_info": "MM/DD/YY",
+        "role_id": 1, "id": 3, "type": "date", "sub_type": "date"}], "roles": [{"color":
+        "(34, 139, 34, 0.35)", "fields": [1, 2, 3], "id": 1, "name": "Student"}]}}'
+  recorded_at: Tue, 01 Dec 2020 23:04:51 GMT
+recorded_with: VCR 6.0.0

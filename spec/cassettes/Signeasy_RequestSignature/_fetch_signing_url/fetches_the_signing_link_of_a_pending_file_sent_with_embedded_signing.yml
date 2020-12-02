@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.signeasy.com/v2/template/rs/1653475/signing/url
+    body:
+      encoding: UTF-8
+      string: '{"recipient_email":"xlablaza@gmail.com","redirect_url":"https://makisu.co","allow_decline":true}'
+    headers:
+      Authorization:
+      - Bearer mKxe5aYOL22Xj2jIK7gukpFoY4gJC1
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 02 Dec 2020 06:48:02 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '189'
+      Connection:
+      - keep-alive
+      Server:
+      - nginx/1.14.2
+      X-Signeasy-Request-Id:
+      - apireq_1606891681893
+      Access-Control-Allow-Credentials:
+      - 'true'
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, PATCH, PUT, DELETE, OPTIONS
+      - GET, POST, PATCH, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Mx-ReqToken,X-Requested-With
+      - Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Mx-ReqToken,X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Disposition
+      - Content-Disposition
+      - Content-Length
+      - Content-Length
+      Access-Control-Allow-Origin:
+      - "*"
+    body:
+      encoding: UTF-8
+      string: '{"url": "https://dl.signeasy.com/signrequest?hash=d94f428ceeb84ea2be33f3b5a495cc730b0a0554558c4cfb8a338aebb45ac72305ad20208fbc4dbf8312cb3d29de7db5&allow_decline=1&next=https%3A//makisu.co"}'
+  recorded_at: Wed, 02 Dec 2020 06:48:02 GMT
+recorded_with: VCR 6.0.0
