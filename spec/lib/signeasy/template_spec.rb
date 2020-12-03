@@ -34,7 +34,7 @@ RSpec.describe Signeasy::Template do
         4205749,
         recipients: [ { first_name: 'Xavi', last_name: 'Ablaza', email: 'xlablaza@gmail.com', role_id: 1 } ],
         cc: [ { email: 'xavi@makisu.co' } ],
-        name: 'Demo Contract 3',
+        name: 'Demo Contract 4',
         message: 'Please sign this demo contract'
       )
       expect(pending_file).to be_a Signeasy::PendingFile
@@ -76,6 +76,16 @@ RSpec.describe Signeasy::Template do
     it 'lists request signatures given a template id', { vcr: { record: :once, match_requests_on: %i[method] } } do
       request_signatures = described_class.list_request_signatures(4205749)
       expect(request_signatures).to all be_a(Signeasy::RequestSignature)
+    end
+  end
+  describe '.fetch_signed_file' do
+    before do
+      Signeasy.configure do |c|
+        c.api_token = CONFIG[:api_token]
+      end
+    end
+    it 'fetches details of a signed file', { vcr: { record: :once, match_requests_on: %i[method] } } do
+      signed_file = described_class.fetch_signed_file(1657767)
     end
   end
 end

@@ -88,6 +88,10 @@ module Signeasy
         end
       end
 
+      def fetch_signed_file(signed_file_id)
+        response = Client.get(signed_file_path(signed_file_id))
+      end
+
       private
 
       def path
@@ -106,6 +110,10 @@ module Signeasy
 
       def request_signature_path(template_id)
         "#{template_path(template_id)}/rs"
+      end
+
+      def signed_file_path(signed_file_id)
+        "#{path}/rs/signed/#{signed_file_id}"
       end
 
       def wrap_raw_template(raw_template)
