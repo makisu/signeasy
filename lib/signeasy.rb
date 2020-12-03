@@ -8,11 +8,13 @@ require 'signeasy/remind_result'
 require 'signeasy/cancel_result'
 require 'signeasy/url_result'
 require 'signeasy/pdf_result'
+require 'signeasy/callback'
 
 module Signeasy
   include GemConfig::Base
 
   with_configuration do
     has :api_token, classes: String
+    has :client_id, classes: String
   end
 end

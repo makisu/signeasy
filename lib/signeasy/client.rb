@@ -4,15 +4,27 @@ module Signeasy
   class Client
     class << self
       def get(path, headers = default_get_headers, params: {})
-        response = connection.get(path) do |req|
+        response = connection(headers).get(path) do |req|
           params.each do |k, v|
             req.params[k.to_s] = v
           end
         end
       end
 
-      def post(path, body = {}, headers = default_post_headers)
-        response = connection(default_post_headers).post(path) do |req|
+      def post(path, body = {}, headers: default_post_headers)
+        response = connection(headers).post(path) do |req|
+          req.body = body.to_json if body.present?
+        end
+      end
+
+      def put(path, body = {}, headers: default_post_headers)
+        response = connection(headers).put(path) do |req|
+          req.body = body.to_json if body.present?
+        end
+      end
+
+      def delete(path, body = {}, headers: default_post_headers)
+        response = connection(headers).delete(path) do |req|
           req.body = body.to_json if body.present?
         end
       end

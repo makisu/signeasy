@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://api.signeasy.com/v2/callback
+    body:
+      encoding: UTF-8
+      string: '{"url":"https://makisu.co/callback3"}'
+    headers:
+      Authorization:
+      - Bearer 1J7TFacFsoSlImdDFndg9M2Scbd1qb
+      X-Client-Id:
+      - fiuLeRRIouFMXblt1keYYbPPbeelFjdOqC7kPmmo
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 202
+      message: ACCEPTED
+    headers:
+      Date:
+      - Thu, 03 Dec 2020 08:26:42 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '431'
+      Connection:
+      - keep-alive
+      Server:
+      - nginx/1.14.2
+      X-Signeasy-Request-Id:
+      - apireq_1606984001858
+    body:
+      encoding: UTF-8
+      string: '{"callback_urls": ["https://makisu.co/callback", "https://makisu.co/callback2"],
+        "https://makisu.co/callback2": {"events": ["rs.initiated", "rs.link_sent",
+        "rs.viewed", "rs.signed", "rs.declined", "rs.voided", "rs.reminded", "rs.completed"]},
+        "https://makisu.co/callback": {"token": "my_custom_token", "events": ["rs.initiated",
+        "rs.link_sent", "rs.viewed", "rs.signed", "rs.declined", "rs.voided", "rs.reminded",
+        "rs.completed"]}}'
+  recorded_at: Thu, 03 Dec 2020 08:26:42 GMT
+recorded_with: VCR 6.0.0
